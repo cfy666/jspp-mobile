@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import { scrollToPosition } from '@/utils/tools';
 export default {
   name: 'TabItem',
   props: {
@@ -16,6 +17,7 @@ export default {
   },
   methods: {
     onTabClick () {
+      scrollToPosition(arguments[0].target);
       this.$emit('onTabClick');
     }
   }
@@ -30,6 +32,7 @@ export default {
   font-size: .14rem;
   text-align: center;
   line-height: .35rem;
+  box-sizing: border-box;
   border-bottom: 2px solid transparent;
 
   &.current {

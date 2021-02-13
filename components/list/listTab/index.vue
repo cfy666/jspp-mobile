@@ -3,7 +3,6 @@
     <div class="tab-wrapper">
       <ul
         class="tab-list"
-        ref="tabList"
         :style="{ width: tabData.length * tabWidth + 'rem'}"
       >
         <tab-item
