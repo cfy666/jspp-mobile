@@ -3,6 +3,9 @@
     <m-header
       :backIconShow="true"
       :listIconShow="false" />
+    <list-tab
+      :tabData="tabData"
+    />
     <pulling-down-loading-text
       :loadingText="loadingText"
     />
@@ -17,6 +20,7 @@ import MHeader from '@/components/common/header';
 import ScrollWrapper from '@/components/common/scrollWrapper';
 import MFooter from '@/components/common/footer';
 import PullingDownLoadingText from '@/components/common/pullDownLoadingText';
+import ListTab from '@/components/list/listTab';
 
 import ListModel from '@/models/Index';
 
@@ -29,7 +33,8 @@ export default {
     MHeader,
     ScrollWrapper,
     MFooter,
-    PullingDownLoadingText
+    PullingDownLoadingText,
+    ListTab
   },
   data () {
     return {
@@ -73,4 +78,7 @@ export default {
 </script>
 
 <style>
+.pull-down-loading {
+  top: .79rem !important;
+}
 </style>
