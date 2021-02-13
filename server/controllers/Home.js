@@ -12,13 +12,17 @@ const { getSliderData } = require('../services/Slider'),
 class Home {
   async getHomeData (ctx, next) {
     const sliderData = await getSliderData(),
-          recomCourseData = await getRecomCourseData();
+          recomCourseData = await getRecomCourseData(),
+          collectionData = await Promise.all(await getCollectinData()),
+          teacherData = await getStarTeacherData();
       
     ctx.body = {
       sliderData,
       navData,
       linkData,
-      recomCourseData
+      recomCourseData,
+      collectionData,
+      teacherData
     }
   }
 

@@ -22,6 +22,12 @@
       <recom-course
         :recomCourseData="recomCourseData"
        />
+      <collection :collectionData="collectionData" />
+      <main-title
+        title="全网优秀老师"
+        :linkShow="true"
+        />
+      <teacher :teacherData="teacherData" />
       <m-footer />
     </scroll-wrapper>
   </div>
@@ -36,7 +42,8 @@ import MainTitle from '@/components/common/mainTitle';
 import CourseNav from '@/components/index/courseNav';
 import Cooperation from '@/components/index/cooperation';
 import RecomCourse from '@/components/index/recomCourse';
-
+import Collection from '@/components/index/collection';
+import Teacher from '@/components/index/teacher';
 import IndexModel from '@/models/Index';
 
 const indexModel = new IndexModel;
@@ -50,24 +57,30 @@ export default {
     MainTitle,
     CourseNav,
     Cooperation,
-    RecomCourse
+    RecomCourse,
+    Collection,
+    Teacher
   },
   data () {
     return {
       sliderData: [],
       navData: [],
       linkData: [],
-      recomCourseData: []
+      recomCourseData: [],
+      collectionData: [],
+      teacherData: []
     }
   },
   async asyncData () {
-    const { sliderData, navData, linkData, recomCourseData } = await indexModel.getHomeData();
+    const { sliderData, navData, linkData, recomCourseData, collectionData, teacherData } = await indexModel.getHomeData();
 
     return {
       sliderData,
       navData,
       linkData,
-      recomCourseData
+      recomCourseData,
+      collectionData,
+      teacherData
     }
   }
 }
