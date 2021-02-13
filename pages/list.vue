@@ -8,6 +8,7 @@
     />
     <pulling-down-loading-text
       :loadingText="loadingText"
+      :topPosition=".79"
     />
     <scroll-wrapper :onPullDown="onPullDown">
       <course-list
@@ -97,8 +98,3 @@ export default {
 }
 </script>
 
-<style>
-.pull-down-loading {
-  top: .79rem !important;
-}
-</style>

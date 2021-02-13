@@ -1,5 +1,7 @@
 <template>
-  <div class="pull-down-loading">
+  <div 
+    class="pull-down-loading"
+    :style="{ top: topPosition + 'rem' }">
     {{loadingText}}
   </div>
 </template>
@@ -8,7 +10,13 @@
 export default {
   name: 'PullingDownLoadingText',
   props: {
-    loadingText: String
+    loadingText: String,
+    topPosition: {
+      type: Number,
+      default () {
+        return .44;
+      }
+    }
   }
 }
 </script>
@@ -20,7 +28,6 @@ export default {
     justify-content: center;
     align-items: center;
     position:fixed;
-    top: .44rem;
     left: 0;
     z-index: 0;
     width: 100%;

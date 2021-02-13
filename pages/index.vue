@@ -5,6 +5,7 @@
     :listIconShow="true" />
     <pulling-down-loading-text
       :loadingText="loadingText"
+      :topPosition=".44"
     />
     <scroll-wrapper :onPullDown="onPullDown">
       <m-swiper :sliderData="sliderData" 

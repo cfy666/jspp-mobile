@@ -49,5 +49,9 @@ module.exports = {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    publicPath: 'http://qogz0lo5p.hd-bkt.clouddn.com',
+    extend (config, ctx) {
+      
+    }
   }
 }
