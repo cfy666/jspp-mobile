@@ -10,7 +10,7 @@
 export default {
   name: 'ScrollWrapper',
   props: {
-
+    onPullDown: Function
   },
   mounted () {
     const BetterScroll = require('better-scroll').default;
@@ -24,6 +24,8 @@ export default {
         stop: 50
       }
     })
+
+    this.scroll.on('pullingDown', this.onPullDown.bind(null, this.scroll));
   }
 }
 </script>

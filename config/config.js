@@ -6,6 +6,13 @@ const URL = {
                                       : 'http://localhost:3008/'
 }
 
+const PULL_DOWN_TEXT = {
+  ORIGIN: '重新加载',
+  PULLING: '正在加载中...',
+  FINISHED: '加载完成'
+}
+
 export {
-  URL
+  URL,
+  PULL_DOWN_TEXT
 }
