@@ -51,6 +51,7 @@ import RecomCourse from '@/components/index/recomCourse';
 import Collection from '@/components/index/collection';
 import Teacher from '@/components/index/teacher';
 import PullingDownLoadingText from '@/components/common/pullDownLoadingText';
+
 import IndexModel from '@/models/Index';
 
 import { PULL_DOWN_TEXT } from '@/config/config';

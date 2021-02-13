@@ -14,4 +14,18 @@ export default class IndexModel extends HTTP {
       })
     })
   }
+
+  getListData () {
+    return new Promise((resolve, reject) => {
+      this.axiosGet({
+        url: 'api/get_list_data',
+        success (data) {
+          resolve(data);
+        },
+        error (err) {
+          reject(err);
+        }
+      })
+    })
+  }
 }

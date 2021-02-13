@@ -27,9 +27,10 @@ class Home {
   }
 
   async getListData (ctx, next) {
+    const tabData = await getCourseCategory();
     
     ctx.body = {
-
+      tabData
     }
   }
 
