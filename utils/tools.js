@@ -5,6 +5,15 @@ function scrollToPosition (target) {
   scrollEl.scrollTo(offsetLeft, 0);
 }
 
+function filterData (data, id) {
+  if (id === 0) {
+    return data;
+  }
+
+  return data.filter(item => item.field === id);
+}
+
 export {
-  scrollToPosition
+  scrollToPosition,
+  filterData
 }

@@ -27,11 +27,19 @@ class Home {
   }
 
   async getListData (ctx, next) {
-    const tabData = await getCourseCategory();
+    const tabData = await getCourseCategory(),
+    courseData = await getCourseData()
     
     ctx.body = {
-      tabData
+      tabData,
+      courseData
     }
+  }
+
+  async getCourseData (ctx, next) {
+    const courseData = await getCourseData();
+    
+    ctx.body = courseData;
   }
 
 }

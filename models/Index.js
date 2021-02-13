@@ -28,4 +28,18 @@ export default class IndexModel extends HTTP {
       })
     })
   }
+
+  getCourseData () {
+    return new Promise((resolve, reject) => {
+      this.axiosGet({
+        url: 'api/get_course_data',
+        success (data) {
+          resolve(data);
+        },
+        error (err) {
+          reject(err);
+        }
+      })
+    })
+  }
 }
